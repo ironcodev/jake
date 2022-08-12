@@ -1,0 +1,21 @@
+<SCRIPT LANGUAGE=VBSCRIPT RUNAT=SERVER>
+	Sub Application_onStart()
+		Application("SessionCount") = 1
+	End Sub
+	'-----------------------------------------------------------------------------	
+	Sub Session_onStart()
+		Application.Lock()
+
+		Application("SessionCount") = Application("SessionCount") + 1
+
+		Application.UnLock()
+	End Sub
+
+	Sub Session_onEnd()
+		Application.Lock()
+
+		Application("SessionCount") = Application("SessionCount") - 1
+		
+		Application.UnLock()
+	End Sub
+</SCRIPT>

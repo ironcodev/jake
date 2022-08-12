@@ -1,0 +1,21 @@
+[
+    {
+        "name": "defaultRoute",
+        "route": "{controller?}/{action?}/{id?}",
+        "order": 1,
+        "isActive": true,
+        "defaults": {
+            "controller": "home",
+            "action": "index"
+        },
+        "httpMethodsAsAction": true,
+        "httpMethods": [
+            "GET", "POST", "PUT", "PATCH"
+        ],
+        "constraints": [
+            {
+
+            }
+        ]
+    }
+]

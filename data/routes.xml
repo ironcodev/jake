@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <route order="1" name="defaultRoute" isActive="true">
+    <pattern>{controller?}/{action?}/{id?}</pattern>
+    <defaults>
+        <item name="controller" value="home" />
+        <item name="action" value="index" />
+    </defaults>
+    <constraints>
+        <constraint></constraint>
+    </constraints>
+    <httpMethods verbs="GET,POST,PUT" mapToAction="true">
+        <item verb="GET" action="get" />
+    </httpMethods>
+  </route>
+  <route>
+  </route>
+</root>
